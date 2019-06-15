@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Crash Course | Selecters</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style media="screen">
+      body{
+        font-size: 17px;
+        font-family: arial;
+        background: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header{
+        background:#333;
+        padding:20px;
+        text-aling: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+      }
+      #container{
+        width:90%;
+        margin:auto;
+        padding:10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>jQuery Crash Course</h1>
+    </header>
+
+    <div id="container">
+      <h1 id="heading1">Heading One</h1>
+        <p id="para1">
+          The jQuery Bower package contains additional
+          files besides the default distribution.
+          In most cases you can ignore these files,
+          however if you wish to download <span>the default</span>
+          release on its own you can use Bower to install
+        </p>
+
+        <h1 id="heading2">Heading Two</h1>
+        <p id="para2">
+          The jQuery Bower package contains additional
+          files besides the default distribution.
+          In most cases you can ignore these files,
+          however if you wish to download <span>the default</span>
+          release on its own you can use Bower to install
+        </p>
+
+      <ul id='list'>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ul>
+
+      <input type="button" value="Button 1">
+      <input type="submit" value="Button 1">
+      <input type="text">
+
+      <a href="http://google.com">Google</a>
+      <a href="http://yahoo.com">Yahoo</a>
+
+
+    </div>
+
+    <script>
+      <!-- $('h1#heading1').hide(); -->
+      <!-- $('h1#heading2').hide(); -->
+
+      <!-- $('p span').css('color', 'red'); -->
+      $('ul#list li:first').css('color', 'red');
+      $('ul#list li:odd').css('color', 'green');
+      $('ul#list li:odd').css('background-color', '#cccccc');
+
+      $(':button').hide();
+      $('[href]').css('color', 'red');
+      $('a[href="http://yahoo.com"]').css('color', 'green');
+
+
+
+    </script>
+
+  </body>
+</html>
